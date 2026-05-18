@@ -1,3 +1,12 @@
+// ============================================================================
+//  Autopsy Roblox External
+//  Created by pwpo
+//
+//  Telegram : fulgurating
+//  Discord  : dolorous
+//  GitHub Repo : https://github.com/pwpo/autopsy
+// ============================================================================
+
 #include <iostream>
 #include <thread>
 #include <Windows.h>
