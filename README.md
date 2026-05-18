@@ -1,6 +1,6 @@
 # Autopsy Roblox External
 
-<img width="598" height="115" alt="image" src="https://github.com/user-attachments/assets/49509dd5-9731-49c7-9b78-54970e09a28b" />
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/f81a7ac5-4d17-473d-b3d8-b461cc6abeea" />
 
 ## Preview
 
@@ -11,6 +11,8 @@ https://streamable.com/usgxc4
 ## Setup
 
 Extract `Dependencies.zip` in the same folder as the project files.
+
+<img width="598" height="115" alt="image" src="https://github.com/user-attachments/assets/49509dd5-9731-49c7-9b78-54970e09a28b" />
 
 Example structure:
 
