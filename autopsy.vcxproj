@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{a2ea39bc-cbf5-432b-858e-8fc43d687c54}</ProjectGuid>
+    <RootNamespace>autopsy</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>../Build/</OutDir>
+    <IntDir>../Build/Extra/</IntDir>
+    <IncludePath>Dependencies\FreeType\include;src;Dependencies</IncludePath>
+    <LibraryPath>Dependencies\FreeType;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;$(LibraryPath)</LibraryPath>
+    <TargetName>autopsy</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdclatest</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;dxgi.lib;Ole32.lib</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Bscmake>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Dependencies\Clipper2Lib\include\clipper2\clipper.core.h" />
+    <ClInclude Include="Dependencies\Clipper2Lib\include\clipper2\clipper.engine.h" />
+    <ClInclude Include="Dependencies\Clipper2Lib\include\clipper2\clipper.export.h" />
+    <ClInclude Include="Dependencies\Clipper2Lib\include\clipper2\clipper.h" />
+    <ClInclude Include="Dependencies\Clipper2Lib\include\clipper2\clipper.minkowski.h" />
+    <ClInclude Include="Dependencies\Clipper2Lib\include\clipper2\clipper.offset.h" />
+    <ClInclude Include="Dependencies\Clipper2Lib\include\clipper2\clipper.rectclip.h" />
+    <ClInclude Include="Dependencies\Clipper2Lib\include\clipper2\clipper.version.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\config\ftconfig.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\config\ftheader.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\config\ftmodule.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\config\ftoption.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\config\ftstdlib.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\config\integer-types.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\config\mac-support.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\config\public-macros.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\freetype.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftadvanc.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftbbox.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftbdf.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftbitmap.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftbzip2.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftcache.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftchapters.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftcid.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftcolor.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftdriver.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\fterrdef.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\fterrors.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftfntfmt.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftgasp.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftglyph.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftgxval.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftgzip.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftimage.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftincrem.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftlcdfil.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftlist.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftlogging.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftlzw.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftmac.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftmm.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftmodapi.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftmoderr.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftotval.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftoutln.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftparams.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftpfr.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftrender.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftsizes.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftsnames.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftstroke.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftsynth.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftsystem.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\fttrigon.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\fttypes.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ftwinfnt.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\autohint.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\cffotypes.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\cfftypes.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\compiler-macros.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\ftcalc.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\ftdebug.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\ftdrv.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\ftgloadr.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\fthash.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\ftmemory.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\ftmmtypes.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\ftobjs.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\ftpsprop.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\ftrfork.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\ftserv.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\ftstream.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\fttrace.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\ftvalid.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\psaux.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\pshints.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svbdf.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svcfftl.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svcid.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svfntfmt.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svgldict.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svgxval.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svkern.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svmetric.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svmm.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svotval.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svpfr.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svpostnm.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svprop.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svpscmap.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svpsinfo.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svsfnt.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svttcmap.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svtteng.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svttglyf.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\services\svwinfnt.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\sfnt.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\svginterface.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\t1types.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\tttypes.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\internal\wofftypes.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\otsvg.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\t1tables.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\ttnameid.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\tttables.h" />
+    <ClInclude Include="Dependencies\FreeType\include\freetype\tttags.h" />
+    <ClInclude Include="Dependencies\FreeType\include\ft2build.h" />
+    <ClInclude Include="Dependencies\ImGui\addons\Colors\Colors.h" />
+    <ClInclude Include="Dependencies\ImGui\addons\imgui_addons.h" />
+    <ClInclude Include="Dependencies\ImGui\backends\imgui_impl_dx11.h" />
+    <ClInclude Include="Dependencies\ImGui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="Dependencies\ImGui\imconfig.h" />
+    <ClInclude Include="Dependencies\ImGui\imgui.h" />
+    <ClInclude Include="Dependencies\ImGui\imgui_internal.h" />
+    <ClInclude Include="Dependencies\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="Dependencies\ImGui\imstb_textedit.h" />
+    <ClInclude Include="Dependencies\ImGui\imstb_truetype.h" />
+    <ClInclude Include="Dependencies\ImGui\misc\imgui_freetype.h" />
+    <ClInclude Include="src\feature\cache.h" />
+    <ClInclude Include="src\feature\phantom.h" />
+    <ClInclude Include="src\feature\aim.h" />
+    <ClInclude Include="src\feature\silent.h" />
+    <ClInclude Include="src\feature\ball.h" />
+    <ClInclude Include="src\feature\misc.h" />
+    <ClInclude Include="src\feature\esp.h" />
+    <ClInclude Include="src\feature\world.h" />
+    <ClInclude Include="src\ui\font\regular.h" />
+    <ClInclude Include="src\ui\font\bold.h" />
+    <ClInclude Include="src\ui\graphic.h" />
+    <ClInclude Include="src\driver\driver.h" />
+    <ClCompile Include="src\engine\model.cpp" />
+    <ClInclude Include="src\engine\engine.h" />
+    <ClInclude Include="src\engine\math.h" />
+    <ClInclude Include="src\engine\offset.h" />
+    <ClInclude Include="src\global.h" />
+    <ClInclude Include="src\log.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Dependencies\Clipper2Lib\src\clipper.engine.cpp" />
+    <ClCompile Include="Dependencies\Clipper2Lib\src\clipper.offset.cpp" />
+    <ClCompile Include="Dependencies\Clipper2Lib\src\clipper.rectclip.cpp" />
+    <ClCompile Include="Dependencies\ImGui\addons\imgui_addons.cpp" />
+    <ClCompile Include="Dependencies\ImGui\backends\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Dependencies\ImGui\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="Dependencies\ImGui\imgui.cpp" />
+    <ClCompile Include="Dependencies\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="Dependencies\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="Dependencies\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="Dependencies\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="Dependencies\ImGui\misc\imgui_freetype.cpp" />
+    <ClCompile Include="src\feature\cache.cpp" />
+    <ClCompile Include="src\feature\aim.cpp" />
+    <ClCompile Include="src\feature\silent.cpp" />
+    <ClCompile Include="src\feature\ball.cpp" />
+    <ClCompile Include="src\feature\misc.cpp" />
+    <ClCompile Include="src\feature\esp.cpp" />
+    <ClCompile Include="src\feature\world.cpp" />
+    <ClCompile Include="src\ui\graphic.cpp" />
+    <ClCompile Include="src\driver\driver.cpp" />
+    <ClCompile Include="src\engine\camera.cpp" />
+    <ClCompile Include="src\engine\human.cpp" />
+    <ClCompile Include="src\engine\instance.cpp" />
+    <ClCompile Include="src\engine\light.cpp" />
+    <ClCompile Include="src\engine\part.cpp" />
+    <ClCompile Include="src\engine\actor.cpp" />
+    <ClCompile Include="src\engine\view.cpp" />
+    <ClCompile Include="src\engine\render.cpp" />
+    <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Dependencies\FreeType\freetype.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="src\driver\luck.asm" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
